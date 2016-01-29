@@ -2,31 +2,32 @@ package com.henry.entity;
 
 import java.util.Date;
 
-//import javax.validation.constraints.Past;
+import javax.validation.constraints.Past;
 
-//import org.hibernate.validator.constraints.Email;
-//import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 
 public class Employee {
 
 	private Integer id;
-	//@NotEmpty
+	@NotEmpty
 	private String lastName;
 
-	//@Email
+	@Email
 	private String email;
 	//1 male, 0 female
 	private Integer gender;
 	
 	private Department department;
 	
-	//@Past
+	@Past
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date birth;
 	
-	@NumberFormat(pattern="#,###,###.#")
+	@NotEmpty
+	//@NumberFormat(pattern="#,###,###.#")
 	private Float salary;
 
 	public Integer getId() {

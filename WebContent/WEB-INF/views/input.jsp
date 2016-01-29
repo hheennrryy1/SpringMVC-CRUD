@@ -37,6 +37,8 @@
 		 <form:select path="department.id" 
 			items="${departments }" itemLabel="departmentName" itemValue="id"></form:select>
 			<br />
+		birth:<form:input path="birth"/> <br />
+		salary:<form:input path="salary"/> <br />
 		<input type="submit" value="提交"/>
 	</form:form>
 </body>
