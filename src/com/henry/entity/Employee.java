@@ -27,7 +27,7 @@ public class Employee {
 	private Date birth;
 	
 	@NotEmpty
-	//@NumberFormat(pattern="#,###,###.#")
+	@NumberFormat(pattern="#,###,###.#")
 	private Float salary;
 
 	public Integer getId() {
